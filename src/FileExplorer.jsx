@@ -1,13 +1,13 @@
 import File from './File.jsx'
 import Folder from './Directory.jsx'
+import Directory from './Directory.jsx'
 
 function FileExplorer({ fileSystem }) {
     
     return (
         <>
             {/* <File fileSystem={fileSystem} /> */}
-            <Folder fileSystem={fileSystem} />
-            
+            <Folder fileSystem={fileSystem} />  
         </>
     )
 }

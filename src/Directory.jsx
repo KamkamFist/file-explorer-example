@@ -6,17 +6,15 @@ function Directory( {fileSystem}) {
         if (x.type === "folder") {
             return (
                 <>
-                    <p>{x.name}, {x.type}</p>
-                    {x.children.map(
-                        (y) => <Directory fileSystem={y}/>
+              
+                    <Directory fileSystem={x}/>
 
-                    )}
                 </>
             )
         } else {
             return (
                 <>
-                    <File fileSystem={fileSystem}/>
+                    <File key={x.name} fileSystem={x}/>
                 </>
             )
         }
@@ -26,7 +24,7 @@ function Directory( {fileSystem}) {
     return (
         <>
         <div className="Folder">
-            <p>Name: {fileSystem.name}</p>
+                        <p>{fileSystem.name}, {fileSystem.type}</p>
             {fileSystem.children?.map(
                 (x) => 
                     display(x)

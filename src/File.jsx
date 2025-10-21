@@ -1,10 +1,10 @@
 import './test.css'
 
-function File( { fileSystem }) {
+function File( { name, type, fileSystem}) {
     return (
         <>
         <div className="file">
-            <p>{fileSystem.name}, {fileSystem.type}</p>
+            <p>{fileSystem.name}, {fileSystem.type} </p>
         </div>
         </>
     )
