@@ -23,12 +23,18 @@ function Directory( {fileSystem}) {
 
     return (
         <>
+        
         <div className="Folder">
+            <div className='folderContent'>
+                        <p className='folderPhoto'></p>
+                        
                         <p>{fileSystem.name}, {fileSystem.type}</p>
+                        </div>
             {fileSystem.children?.map(
                 (x) => 
                     display(x)
             )}
+            
         </div>
         </>
     )
